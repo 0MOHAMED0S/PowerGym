@@ -57,6 +57,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/favorite', [favorites::class, 'index'])->name('Favorites');
     //cart
     Route::get('/Cart', [cartController::class, 'index'])->name('cart');
+    Route::get('/Cart/remove/{id}', [cartController::class, 'remove'])->name('cartRemove');
+
 
 });
 
@@ -120,8 +122,7 @@ Route::middleware(['AdmSub','auth'])->group(function () {
     //chat
     Route::get('/chat', [chats::class, 'index'])->name('chat');
     Route::get('/dietTrain', [dietTrains::class, 'index'])->name('dietTrain');
-Route::post('/dietTrain/store', [dietTrains::class, 'store'])->name('send');
-
+    Route::post('/dietTrain/store', [dietTrains::class, 'store'])->name('send');
     });
 Route::middleware(['Subscriber','SuberAdmin','auth'])->group(function () {
 

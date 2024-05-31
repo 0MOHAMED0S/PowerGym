@@ -9,7 +9,6 @@ class dietTrains extends Controller
 {
     public function index(request $request)
     {
-
         return view('MainPages.diteTrain');
     }
 
@@ -30,15 +29,15 @@ class dietTrains extends Controller
         $Equipments->save();
         return redirect()->back()->with('success', 'Data stored successfully');
     }
-
     public function dite(request $request)
     {
         $query = $request->input('query');
 
         $dites = diteTrain::where(function ($q) use ($query) {
-            $q->where('connection', 'LIKE', "%$query%");        })
-        ->orderByRaw("CASE WHEN connection LIKE '$query%' THEN 1 ELSE 2 END")
-        ->get();
+            $q->where('connection', 'LIKE', "%$query%");
+        })
+            ->orderByRaw("CASE WHEN connection LIKE '$query%' THEN 1 ELSE 2 END")
+            ->get();
         return view('MainPages.AdminPages.Dite.ditetrain', compact('dites'));
     }
     public function read(Request $request, $id)
@@ -53,6 +52,4 @@ class dietTrains extends Controller
         $dite->save();
         return redirect()->back()->with('success', 'updated successfully');
     }
-
-
 }

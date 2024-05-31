@@ -66,11 +66,7 @@ table td.product .product-log {
 table td.product .product-log img {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+    border-radius: 25%;
 }
 
 table td.product .subtext {
@@ -90,16 +86,17 @@ table td .qty-btn {
     -o-border-radius: 5px;
 }
 
-table td.close p {
+table td.close a {
     font-family: Math, Arial, Helvetica, sans-serif;
     cursor: pointer;
     color: aliceblue;
     font-size: 20px;
     font-weight: bold;
+    text-decoration: none;
 }
 
-table td.close p:active {
-    color: red;
+table td.close a:active {
+    color: rgb(46, 174, 0);
 }
 
 .summary {

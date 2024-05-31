@@ -25,12 +25,12 @@
                 <tbody id="cart-items">
                     @foreach ($carts as $cart )
                     <tr data-id="{{ $cart->id }}" data-price="{{ $cart->product->newprice ?? $cart->product->price }}">
-                        <td class="product">
+                        <td style="display: block" class="product">
                             <div class="product-log">
                                 <img src="{{asset('storage/'.$cart->product->path)}}" alt="" />
                             </div>
                             <div class="product-name">
-                            <span class="subtext">{{$cart->product->name}}</span>
+                                {{$cart->product->name}}
                             </div>
                         </td>
                         <td>
@@ -41,7 +41,7 @@
                         </td>
                         <td>$<span class="total-price">{{ $cart->product->total_price}}</span></td>
                         <td class="close">
-                            <p>X</p>
+                            <a id="close" href="{{route('cartRemove',['id'=>$cart->id])}}">X</a>
                         </td>
                     </tr>
                     @endforeach

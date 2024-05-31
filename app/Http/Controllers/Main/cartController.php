@@ -13,4 +13,15 @@ class cartController extends Controller
         $carts = Cart::where('user_id',auth()->user()->id)->get();
         return view('MainPages.cart',compact('carts'));
     }
+    public function remove($id){
+        $cart = Cart::find($id);
+        // Check if the product exists
+        if (!$cart) {
+            return redirect()->back();
+        }
+
+        // Proceed with the deletion
+        $cart->delete();
+        return redirect()->back();
+    }
 }
