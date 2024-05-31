@@ -37,13 +37,11 @@
                             <span>$</span>{{ $cart->product->newprice ?? $cart->product->price }}
                         </td>
                         <td>
-                            <button class="qty-btn decrease">-</button>
-                            <span class="qty">{{ $cart->quantity }}</span>
-                            <button class="qty-btn increase">+</button>
+                            <livewire:quantity :cartId="$cart->id" :key="$cart->id" />
                         </td>
-                        <td>$<span class="total-price">{{ $cart->product->newprice * $cart->quantity ?? $cart->product->price * $cart->quantity }}</span></td>
+                        <td>$<span class="total-price">{{ $cart->product->total_price}}</span></td>
                         <td class="close">
-                            <p>X</p>
+                            <livewire:delete :cartId="$cart->id" :key="$cart->id" />
                         </td>
                     </tr>
                     @endforeach
@@ -86,24 +84,20 @@
                 });
                 document.getElementById('total').textContent = total.toFixed(2);
             }
-
             document.querySelectorAll('.qty-btn').forEach(function(button) {
                 button.addEventListener('click', function() {
                     const row = this.closest('tr');
                     const qtyElement = row.querySelector('.qty');
                     let quantity = parseInt(qtyElement.textContent);
-
                     if (this.classList.contains('decrease') && quantity > 1) {
                         quantity--;
                     } else if (this.classList.contains('increase')) {
                         quantity++;
                     }
-
                     qtyElement.textContent = quantity;
                     updateTotal();
                 });
             });
-
             updateTotal();
         });
     </script>

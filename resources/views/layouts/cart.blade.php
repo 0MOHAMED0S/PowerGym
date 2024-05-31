@@ -20,12 +20,13 @@
         <link rel="stylesheet" href="{{asset('css/footer.css')}}">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 @yield('style')
+@livewireStyles
     </head>
     <body >
         <div class="min-h-screen bg-gray-100">
             @include('layouts.loader')
             @include('layouts.header.header')
-            @include('layouts.sidebar.sidebar') 
+            @include('layouts.sidebar.sidebar')
             {{-- @include('layouts.navigation') --}}
             <!-- Page Heading -->
             {{-- @if (isset($header))
@@ -45,5 +46,6 @@
         <script src="{{asset('js/main.js')}}"></script>
         <script src="{{asset('js/sidebar.js')}}"></script>
         @yield('script')
+        @livewireScripts
     </body>
 </html>
