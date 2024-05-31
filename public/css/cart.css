@@ -126,6 +126,7 @@ table td.close p:active {
     color: #18c601;
     cursor: pointer;
     font-size: 16px;
+    text-decoration: none;
 }
 .payment-info{
     display: flex;

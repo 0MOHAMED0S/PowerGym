@@ -41,7 +41,7 @@
                         </td>
                         <td>$<span class="total-price">{{ $cart->product->total_price}}</span></td>
                         <td class="close">
-                            <livewire:delete :cartId="$cart->id" :key="$cart->id" />
+                            <p>X</p>
                         </td>
                     </tr>
                     @endforeach
