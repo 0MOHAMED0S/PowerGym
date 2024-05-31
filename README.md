@@ -1,5 +1,5 @@
 <p align="center"><a href="https://laravel.com" target="_blank">
-    <img src="./imgs/Screenshot 2024-05-25 144025.png" width="400" alt="Power Gym">
+    <img src="./imgs/power.png" width="1000" alt="Power Gym">
 </a></p>
 
 <p align="center">
