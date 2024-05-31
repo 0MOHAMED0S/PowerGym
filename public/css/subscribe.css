@@ -1,0 +1,133 @@
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 40px;
+    margin: 5px;
+}
+
+h4 {
+    color: rgb(19, 225, 0);
+    font-size: 25px;
+    margin: 5px;
+}
+
+body {
+    background-color: #303030;
+}
+.container2{
+    width: 100%;
+    padding: 0 100px;
+    box-sizing: border-box;
+}
+.card_section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 30px;
+    width:100%;
+    margin: 79px auto 0;
+}
+.card {
+    min-width: 234px;
+    padding: 30px 50px 0px 50px;
+    min-height: 470px;
+    background-color: #383838d3;
+    border-radius: 48px 48px 0px 0px;
+    border: 2px solid rgba(24, 167, 2, 0.482);
+    background-image: linear-gradient(-211deg, #28ff004f 29%, #ffe6fa00 29%);
+    transition: 0.2s;
+}
+
+.card:hover {
+    border: 2px solid rgb(19, 225, 0);
+    /* background-image: linear-gradient(229deg, #28ff004f 29%, #ffe6fa00 29%); */
+    transform: translateY(-15px);
+}
+
+.card_head {
+    min-height: 150px;
+}
+
+.card_body {
+    min-height: 230px;
+}
+
+.Subscripe {
+    padding: 8px;
+    color: aliceblue;
+    background-color: rgb(19, 225, 0);
+    border: 2px solid rgb(19, 225, 0);
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.1s;
+    margin-bottom: 5px;
+}
+
+.Subscripe:hover {
+    border: 2px solid rgb(19, 225, 0);
+    background-color: transparent;
+}
+.see_more {
+    padding: 12px;
+    color: aliceblue;
+    background-color: rgb(41 179 28);
+    border: 2px solid rgb(19, 225, 0);
+    border-radius: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.1s;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+.see_more:hover {
+    border: 2px solid rgb(19, 225, 0);
+    background-color: transparent;
+}
+.features {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.features h2 {
+    font-size: 18px;
+}
+
+#gray {
+    color: rgb(181, 181, 181);
+}
+
+.nanum-gothic-regular {
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+
+@media screen and (max-width: 1300px) {
+
+}
+
+@media screen and (max-width: 1000px) {
+
+}
+
+@media screen and (max-width: 805px) {
+    .card {
+        min-width: 200px;
+        padding: 30px 50px 0px 50px;
+        min-height: 435px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+}

@@ -1,0 +1,222 @@
+
+  .custom-container * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+  }
+  /* Global color variables */
+  :root {
+    --gre-color: #13e100;
+    --fa-primary-color: #8b8e92;
+    --fa-secondary-color: #acf7b2;
+  }
+  /* Defines the styles for the sl-container class */
+  .sl-container {
+    width: 100%;
+    height: 75vh;
+    padding: 25px 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-image: linear-gradient(180deg, var(--gre-color), #303030);
+    background-image: linear-gradient(180deg, #1f8810, #303030); */
+  }
+  /* Defines the styles for the sli-title class */
+  .sl-container .sli-title {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Defines the styles for the h1 inside title class */
+    h1 {
+      color: white;
+      text-transform: uppercase;
+      /* Defines the styles for the span inside h1 class */
+      span {
+        color: #13e100;
+      }
+    }
+  }
+  
+  .sl-container .sli-content {
+    position: relative;
+    width: 1300px;
+    height: 100%;
+    padding: 10px 20px;
+    overflow: hidden;
+  }
+  .sl-container .sli-content .sli-con-ul {
+    position: relative;
+    max-width: 1125px;
+    height: 100%;
+    margin: auto;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .sl-container .sli-content ul.sli-list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    z-index: 10;
+    cursor: grab;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+  }
+  .sl-container .sli-content ul.sli-list::-webkit-scrollbar {
+    display: none;
+  }
+  .sl-container .sli-content ul.sli-list:active {
+    cursor: grabbing;
+  }
+  .sl-container .sli-content ul.sli-list.Dragging {
+    scroll-snap-type: none;
+    scroll-behavior: smooth;
+    cursor: grabbing;
+  }
+  .sl-container .sli-content ul.sli-list .item-card {
+    width: calc(100% / 5);
+    height: 300px;
+    scroll-snap-align: start;
+  }
+  .sl-container .sli-content ul.sli-list .item-card .cont-card {
+    padding: 10px;
+    width: 225px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sl-container .sli-content ul.sli-list .item-card .cont-card .cont-img {
+    width: 100%;
+    height: 260px;
+    border-radius: 20px 20px 3px 3px;
+    -webkit-border-radius: 20px 20px 3px 3px;
+    -moz-border-radius: 20px 20px 3px 3px;
+    -ms-border-radius: 20px 20px 3px 3px;
+    -o-border-radius: 20px 20px 3px 3px;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      -webkit-border-radius: inherit;
+      -moz-border-radius: inherit;
+      -ms-border-radius: inherit;
+      -o-border-radius: inherit;
+    }
+  }
+  .sl-container .sli-content ul.sli-list .item-card .cont-card .cont-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3d3c3c33;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px 3px 20px 20px;
+    h4 {
+      font-size: 18px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+    p {
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: rgb(19, 225, 0);
+    }
+  }
+  .sl-container .sli-content .cor-rev-next {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    span {
+      font-size: 70px;
+      cursor: pointer;
+      &.next {
+        float: right;
+      }
+      &.rever {
+        float: left;
+      }
+    }
+  }
+  .sl-container .sli-content .cor-rev-next .next.disabled,
+  .sl-container .sli-content .cor-rev-next .rever.disabled {
+    cursor: no-drop !important;
+    opacity: 0.5;
+  }
+  .sl-container .sli-content .indicators ul {
+    display: flex;
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    li {
+      width: 50px;
+      height: 5px;
+      background: #baebaa;
+      margin: 5px;
+      border-radius: 20px;
+      cursor: pointer;
+      &.active {
+        background-color: #1f8810;
+      }
+    }
+  }
+  @media screen and (max-width: 1300px) {
+    .sl-container .sli-content {
+      width: 1000px;
+    }
+    .sl-container .sli-content .sli-con-ul {
+      max-width: 900px;
+    }
+    .sl-container .sli-content ul.sli-list .item-card {
+      width: calc(100% / 4);
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .sl-container .sli-content {
+      width: 800px;
+    }
+    .sl-container .sli-content .sli-con-ul {
+      max-width: 680px;
+    }
+    .sl-container .sli-content ul.sli-list .item-card {
+      width: calc(100% / 3);
+    }
+  }
+  @media screen and (max-width: 805px) {
+    .sl-container .sli-content {
+      width: 580px;
+    }
+    .sl-container .sli-content .sli-con-ul {
+      max-width: 450px;
+    }
+    .sl-container .sli-content ul.sli-list .item-card {
+      width: calc(100% / 2);
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .sl-container .sli-content {
+      width: 360px;
+    }
+    .sl-container .sli-content .sli-con-ul {
+      max-width: 225px;
+    }
+    .sl-container .sli-content ul.sli-list .item-card {
+      width: calc(100% / 1);
+    }
+  }
+  

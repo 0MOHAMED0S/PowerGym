@@ -1,0 +1,55 @@
+body {
+    background-color: #303030;
+    margin: 0;
+    overflow: hidden;
+}
+section{
+    margin: 20px 0px;
+}
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 40px;
+    margin: 5px;
+}
+#height{
+    height: 54px;
+}
+hr {
+    border: none;
+    border-top: 2px solid rgb(19, 225, 0); /* Set the color here */
+    width: 869px;
+    margin: 20px auto; /* Optional: Adjust margin as needed */
+}
+
+
+@media screen and (max-width: 1300px) {
+
+}
+
+@media screen and (max-width: 1000px) {
+    hr{
+        width: auto;
+    }
+    #hh{
+        display: none;
+    }
+    nav{
+        height: 51px;
+    }
+    #sidebar #d{
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 805px) {
+    hr{
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+}

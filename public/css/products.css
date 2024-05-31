@@ -1,0 +1,202 @@
+.add * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.add {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.add h1 {
+    color: rgb(22, 173, 22);
+    font-size: 30px;
+    text-decoration: underline;
+    text-shadow: -1px -1px 0px #63ee71;
+    text-transform: uppercase;
+}
+
+.add p {
+    font-size: 18px;
+    color: azure;
+}
+
+.conteiner3 {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.img_conteiner {
+
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    left: 0;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.slider-1>.text_contenier {
+    width: 240px;
+    height: 50px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: rgb(41, 62, 41);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.text_contenier i {
+    position: absolute;
+    top: -70px;
+    right: 10px;
+    display: block;
+    font-size: 30px;
+    color: #000;
+
+}
+
+.text_contenier i:hover {
+    color: red;
+}
+
+.text_contenier h3 {
+    padding-top: 15px;
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+#heart {
+    padding-top: 30px;
+}
+
+.slider-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 30px;
+    position: relative;
+}
+
+#img {
+    position: relative;
+    width: 240px;
+    height: 370px;
+    transition: 0.7s;
+    border-radius: 20px;
+    box-shadow: 1px 0px 20px 16px rgb(6, 83, 6);
+}
+
+.button {
+    position: absolute;
+    width: 240px;
+    height: 370px;
+    border-radius: 20px;
+    transition: 0.7s;
+}
+
+#c1:target~.img_conteiner #img1,
+#c1:target~.img_conteiner #button1 {
+
+    width: 400px;
+    height: 500px;
+}
+
+#c2:target~.img_conteiner #img2,
+#c2:target~.img_conteiner #button2 {
+    width: 400px;
+    height: 500px;
+}
+
+#c3:target~.img_conteiner #img3,
+#c3:target~.img_conteiner #button3 {
+    width: 400px;
+    height: 500px;
+}
+
+#c4:target~.img_conteiner #img4,
+#c4:target~.img_conteiner #button4 {
+    width: 400px;
+    height: 500px;
+}
+
+#c5:target~.img_conteiner #img5,
+#c5:target~.img_conteiner #button5 {
+    width: 400px;
+    height: 500px;
+}
+
+#c6:target~.img_conteiner #img6,
+#c6:target~.img_conteiner #button6 {
+    width: 400px;
+    height: 500px;
+}
+
+#c7:target~.img_conteiner #img7,
+#c7:target~.img_conteiner #button7 {
+    width: 400px;
+    height: 500px;
+}
+
+#c8:target~.img_conteiner #img8,
+#c8:target~.img_conteiner #button8 {
+    width: 400px;
+    height: 500px;
+}
+
+#c9:target~.img_conteiner #img9,
+#c9:target~.img_conteiner #button9 {
+    width: 400px;
+    height: 500px;
+}
+
+#c1:target~.img_conteiner {
+    left: 60%
+}
+
+#c2:target~.img_conteiner {
+    left: 40%
+}
+
+#c3:target~.img_conteiner {
+    left: 20%
+}
+
+#c4:target~.img_conteiner {
+    left: 0%
+}
+
+#c5:target~.img_conteiner {
+    left: -20%
+}
+
+#c6:target~.img_conteiner {
+    left: -40%
+}
+
+#c7:target~.img_conteiner {
+    left: -60%
+}
+
+#c8:target~.img_conteiner {
+    left: -60%
+}
+
+#c9:target~.img_conteiner {
+    left: -40%
+}

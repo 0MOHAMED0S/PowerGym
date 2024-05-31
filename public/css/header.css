@@ -1,0 +1,142 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px 0 15px;
+    background-image: linear-gradient(6deg, #28ff004f 29%, #ffe6fa00 29%);
+}
+header{
+    background-color: #303030;
+    width: 100%;
+    z-index: 99;
+    position: fixed;
+    background-image: linear-gradient(-6deg, #28ff004f 29%, #ffe6fa00 29%);
+}
+#hh{
+    padding-right: 90px;
+}
+
+nav div{
+    padding: 0;
+}
+nav div ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+    gap: 50px;
+    margin-top: revert;
+}
+nav div ul a{
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    transition: 0.5s;
+}
+nav div ul .active{
+    color: rgb(19, 225, 0);
+}
+nav div ul a:hover{
+    color: rgb(19, 225, 0);
+}
+nav .icons{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+nav .icons .fill .bi-bell-fill{
+    font-size: 26px;
+    color: white;
+    transition: 0.5s;
+}
+nav .icons .fill .bi-list{
+    font-size: 30px;
+    color: white;
+    transition: 0.5s;
+}
+nav .icons .fill .bi-bell-fill:hover{
+    color: rgb(19, 225, 0);
+}
+nav .icons .fill .bi-list:hover{
+    color: rgb(19, 225, 0);
+}
+nav .power{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+nav .power a i{
+    font-size: 26px;
+}
+nav .power h1{
+    color: white;
+    margin: 0;
+    gap: 10px;
+    display: flex;
+    font-size: 18px;
+}
+nav .power h1 span{
+    color: rgb(19, 225, 0);
+}
+#hr_home{
+    width: auto;
+    margin: 0;
+}
+#sidebar #d{
+    display: none;
+}
+
+
+@media screen and (max-width: 1300px) {
+
+}
+
+@media screen and (max-width: 1000px) {
+    #hr_home{
+        width: auto;
+    }
+    header h1{
+    font-size: 15px;
+    }
+    nav div ul{
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        gap: 15px;
+    }
+
+}
+
+@media screen and (max-width: 805px) {
+    #hr_home{
+        width: auto;
+    }
+    nav .icons .fill .bi-bell-fill{
+        font-size: 20px;
+    }
+    nav .icons .fill .bi-list{
+        font-size: 20px;
+    }
+    nav .power a i {
+        font-size: 20px;
+    }
+    nav{
+        padding: 0px 15px 0 5px;
+        background-image: linear-gradient(17deg, #28ff004f 29%, #ffe6fa00 29%);
+        }
+        header{
+            background-image: linear-gradient(-18deg, #28ff004f 29%, #ffe6fa00 29%);
+        }
+}
+
+@media screen and (max-width: 600px) {
+    #hr_home{
+        width: auto;
+    }
+    #hh{
+        padding-right: 48px;
+    }
+    nav .power{
+        gap: 8px;
+    }
+}
+

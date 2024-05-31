@@ -1,0 +1,10 @@
+hr {
+    border: none;
+    border-top: 2px solid rgb(19, 225, 0);
+    width: 869px;
+    margin: 20px auto;
+    opacity: 1;
+}
+#sidebar {
+    margin-top: 56px;
+}

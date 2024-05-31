@@ -1,0 +1,112 @@
+:root {
+    --colr-gren: rgb(19, 225, 0);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(19, 225, 0, 0.275)130%), url(../files/images/Home/dollar-gill-PsuIO9XGhr8-unsplash.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+.container .start {
+    width: 80%;
+    position: absolute;
+    margin: 0 auto;
+    padding-top: 8%;
+
+}
+
+.container .start h1 {
+    font-size: 70px;
+    color: white;
+    text-align: center;
+    margin-left: 25%;
+    margin-top: -3%;
+    letter-spacing: 14px;
+}
+
+.container .start h2 {
+    font-size: 80px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 70px;
+    margin-left: 60%;
+    color: var(--colr-gren);
+    letter-spacing: 14px;
+}
+
+.container .start a {
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 7%;
+    margin-left: 65%;
+    padding: 20px;
+    border-radius: 25px;
+    color: white;
+    border: 1px solid var(--colr-gren);
+    background-color: var(--colr-gren);
+    transition: 0.2s;
+    margin-top: 10%;
+    letter-spacing: 1px;
+    text-transform: lowercase;
+    transition: 0.5s;
+}
+
+.container .start a:hover {
+    box-shadow:
+        -4px -5px 2px rgba(19, 225, 0, 0.451),
+        -4px 5px 2px rgba(19, 225, 0, 0.451),
+        4px -5px 2px rgba(19, 225, 0, 0.451),
+        4px 5px 2px rgba(19, 225, 0, 0.451);
+}
+
+.monoton-regular {
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media screen and (max-width: 874px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 75vh;
+    }
+
+    .container .start {
+        width: auto;
+        top: 50%;
+        right: 30%;
+        transform: translate(50%, -55%);
+    }
+
+    .container .start h1 {
+        font-size: 35px;
+        margin-left: 0%;
+        margin-top: 0%;
+        letter-spacing: 0;
+    }
+
+    .container .start h2 {
+        font-size: 35px;
+        margin-bottom: 50px;
+        margin-left: 40%;
+        letter-spacing: 0;
+    }
+
+    .container .start a {
+        margin-top: 0%;
+        margin-left: 0%;
+        font-size: 16px;
+        padding: 15px;
+    }
+}

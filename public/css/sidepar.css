@@ -1,0 +1,60 @@
+#sidebar {
+    height: 100%;
+    transform: translateX(100%);
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    background-color: #303030;
+    overflow-x: hidden;
+    width: 200px;
+    transition: transform 0.5s;
+    /* padding-top: 20px; */
+    margin-top: 51px;
+    margin-right: 0px;
+    border: 3px solid rgba(24, 167, 2, 0.482);
+    background-image: linear-gradient(-84deg, #28ff004f 29%, #ffe6fa00 29%);
+}
+
+#sidebar a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+    display: block;
+    transition: 0.5s;
+}
+#sidebar a.active{
+    background-color:#00bb00 ;
+}
+#sidebar a:hover {
+    background-color: #00bb00;
+    /* background-image: linear-gradient(325deg, #28ff0000 29%, #28ff004f 29%); */
+}
+
+#main {
+    transition: margin-right 0.5s ease;
+    padding: 16px;
+}
+
+.open-btn {
+    cursor: pointer;
+    background-color: #11111100;
+    border: none;
+    font-size: 30px;
+}
+
+.close-btn {
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #11111100;
+    color: #ff0076;
+    border: none;
+    padding: 15px;
+    position: absolute;
+    top: 0;
+}
+#hr_side{
+    width: 60px;
+    margin: 0;
+}

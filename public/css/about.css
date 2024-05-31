@@ -1,0 +1,167 @@
+* {
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    gap: 140px;
+    background-image: linear-gradient(112deg, #28ff004f 49%, #ffe6fa00 29%);
+}
+.two {
+    width: 250px;
+    height: 200px;
+    margin-top: 20px;
+    padding: 30px;
+    border-radius: 36px;
+}
+.three {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 197px;
+    height: 240px;
+    border-radius: 36px;
+}
+
+.one {
+    border-radius: 15px;
+    margin-left: 39px;
+    display: flex;
+    border-radius: 36px;
+}
+
+.text h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+.text h1 span {
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(19, 225, 0);
+}
+p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 40px;
+    line-height: 34px;
+}
+
+strong {
+    color: red;
+    font-size: 15px;
+}
+
+.text h4 {
+    color: rgb(19, 225, 0);
+    font-size: 30px;
+    /* text-decoration: underline; */
+    margin: auto;
+    padding-top: 10px;
+    /* text-shadow: -10px 5px 40px #74f774 */
+}
+
+.text h3 {
+    color: rgb(19, 225, 0);
+    /* text-decoration: underline; */
+    padding-top: 40px;
+    margin: auto;
+    /* text-shadow: -10px 5px 40px #74f774 */
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+}
+.oo{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ooo{
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+.about_icons{
+    margin-top: 50px;
+    gap: 50px;
+    display: flex;
+    align-items: center;
+}
+.about_icons .circle{
+    background-color: rgb(19, 225, 0);
+    color: #ffffff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid rgb(19, 225, 0);
+    transition: 0.5s;
+}
+.about_icons .circle:hover{
+    background-color: #3d3c3c33;
+    /* color: rgb(19, 225, 0); */
+}
+
+
+
+
+
+
+@media screen and (max-width: 1300px) {
+    .ooo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .one {
+        display: none;
+    }
+    .about{
+        background-image: none;
+        display: flex;
+        justify-content: center;
+    }
+    .text h3{
+        text-align: center;
+    }
+    .about_icons{
+        justify-content: center;
+    }
+    .text h1{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 805px) {
+.about_icons{
+    gap: 15px;
+}
+.text{
+    padding: 3px;
+}
+.text h1{
+    font-size: 30px;
+    text-align: center;
+}
+.text h1 span {
+    font-size: 30px;
+}
+.text p{
+    font-size: 16px;
+    text-align: center;
+}
+}
+
+@media screen and (max-width: 600px) {
+
+}
