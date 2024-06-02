@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\contact;
 use App\Http\Controllers\Admin\dashboard;
 use App\Http\Controllers\Admin\Equipment;
 use App\Http\Controllers\Admin\LogoName;
+use App\Http\Controllers\Admin\OrdersController;
 use App\Http\Controllers\Admin\packages;
 use App\Http\Controllers\Admin\roles;
 use App\Http\Controllers\Admin\shop;
@@ -46,20 +47,11 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/editimage/{id}', [ProfileController::class, 'editimage'])->name('editimage');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::get('/profile/qrcode', function () {
-        $user = auth()->user();
-        $qrText = 'Name: ' . $user->name . "\n" . 'Code: ' . $user->id;
-        $qrCode = QrCode::size(300)->generate($qrText);
-        return view('profile.qrcode', compact('qrCode'));
-    })->name('qrcode');
-
     //My Favorites
     Route::get('/favorite', [favorites::class, 'index'])->name('Favorites');
     //cart
     Route::get('/Cart', [cartController::class, 'index'])->name('cart');
     Route::get('/Cart/remove/{id}', [cartController::class, 'remove'])->name('cartRemove');
-
-
 });
 
     //perfect weight
@@ -110,6 +102,9 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/dashboard/product/store', [shop::class, 'store'])->name('StoreProduct');
     Route::delete('/dashboard/product/delete/{id}', [shop::class, 'delete'])->name('DeleteProduct');
     Route::put('/dashboard/product/update/{id}', [shop::class, 'update'])->name('UpdateProduct');
+    //order
+    Route::get('/dashboard/Orders', [OrdersController::class, 'index'])->name('orders');
+    Route::put('/dashboard/Orders/update/{id}', [OrdersController::class, 'update'])->name('UpdateOrder');
 });
 
 Route::middleware(['auth','CodeVerify'])->group(function () {
@@ -117,6 +112,10 @@ Route::middleware(['auth','CodeVerify'])->group(function () {
     Route::post('paypal/{id}', [PaypalController::class, 'paypal'])->name('paypal');
     Route::get('success', [PaypalController::class, 'success'])->name('success');
     Route::get('cancel', [PaypalController::class, 'cancel'])->name('cancel');
+    //order
+    Route::post('paypal', [PaypalController::class, 'order'])->name('orderpaypal');
+    Route::get('success', [PaypalController::class, 'ordersuccess'])->name('ordersuccess');
+    Route::get('cancel', [PaypalController::class, 'ordercancel'])->name('ordercancel');
 });
 Route::middleware(['AdmSub','auth'])->group(function () {
     //chat

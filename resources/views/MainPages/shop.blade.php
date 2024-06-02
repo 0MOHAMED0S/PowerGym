@@ -30,7 +30,7 @@
                     </a>
                     <div class="icon">
                         <livewire:favorites :productID="$product->id" />
-                        <livewire:cart :productId="$product->id" />
+                    <livewire:cart :productId="$product->id" />
                     </div>
                     <div class="text">
                         <h2>{{ $product->name }}</h2>

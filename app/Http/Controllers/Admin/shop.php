@@ -13,7 +13,6 @@ class shop extends Controller
     {
         $query = $request->input('query');
         $products = ModelsShop::query();
-
         if (is_numeric($query)) {
             // Search within the price range
             $products->where('price', '>=', 0)
@@ -24,13 +23,10 @@ class shop extends Controller
                 $q->where('name', 'LIKE', "%$query%")
                     ->orWhere('price', 'LIKE', "%$query%");
             });
-
             // Order by name starting with the query string
             $products->orderByRaw("CASE WHEN name LIKE '$query%' THEN 1 ELSE 2 END");
         }
-
         $products = $products->get();
-
         return view('MainPages.AdminPages.shop.shop', compact('products'));
     }
 

@@ -18,6 +18,8 @@
     <hr id="hr_side">
     <a href="{{ route('AdminShop') }}" class="sidebar-link @if(Request::is('dashboard/products')) active @endif">PRODUCTS</a>
     <hr id="hr_side">
+    <a href="{{ route('orders') }}" class="sidebar-link @if(Request::is('dashboard/Orders')) active @endif">Orders</a>
+    <hr id="hr_side">
     <a href="{{ route('AdminPackages') }}" class="sidebar-link @if(Request::is('dashboard/packages')) active @endif">PACKAGES</a>
     <hr id="hr_side">
     <a href="{{ route('AdminEquipments') }}" class="sidebar-link @if(Request::is('dashboard/equipments')) active @endif">EQUIPMENTS</a>

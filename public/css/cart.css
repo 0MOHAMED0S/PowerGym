@@ -177,7 +177,13 @@ table td.close a:active {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
-
+#phone{
+    background-color: white;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 8px;
+    margin-bottom: 14px;
+}
 @media screen and (max-width: 1000px) {
     .container {
         width: 100%;

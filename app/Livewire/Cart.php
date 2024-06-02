@@ -35,7 +35,7 @@ class Cart extends Component
         if ($this->product) {
             $this->product->delete();
             $this->product = null;
-        } else {
+        } else if($this->price->quantity >0) {
             $newCart = ModelsCart::create([
                 'user_id' => $auth,
                 'product_id' => $this->productId,

@@ -69,6 +69,10 @@ class User extends Authenticatable
     {
         return $this->hasOne(images::class);
     }
+    public function Order(): HasOne
+    {
+        return $this->hasOne(Order::class);
+    }
     public function subscriber(): HasOne
     {
         return $this->hasOne(Subscribe::class);

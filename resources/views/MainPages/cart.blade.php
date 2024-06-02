@@ -56,7 +56,8 @@
         </div>
         <div class="payment-info">
             <h1>Payment Info.</h1>
-            <form>
+            <form method="POST" action="{{route('orderpaypal')}}">
+                @csrf
                 <div class="payment-method">
                     <label>
                         <input type="radio" name="payment" checked /> PayPal
@@ -64,10 +65,14 @@
                     <label> <input disabled type="radio" name="payment" /> Soon </label>
                 </div>
                 <div class="card-details">
-                    <label>Address</label>
-                    <textarea name="address" id="address" cols="30" rows="5"></textarea>
+                    <label>Phone</label>
+                    <input  name="phone_number" id="phone" id="address" required>
                 </div>
-                <button type="button" class="checkout-btn">Check Out</button>
+                <div class="card-details">
+                    <label>Address</label>
+                    <textarea name="address" id="address" cols="30" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="checkout-btn">Check Out</button>
             </form>
         </div>
     </div>
