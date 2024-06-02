@@ -18,7 +18,7 @@
                 <li><a class=" @if(Request::is('shop')) active @endif" href="{{route('usershop')}}">Shop</a></li>
                 <li><a class=" @if(Request::is('favorite')) active @endif"   href="{{route('Favorites')}}">My Favorites</a></li>
                 <li><a class=" @if(Request::is('Cart')) active @endif" href="{{route('cart')}}">Cart</a></li>
-
+                <li><a class=" @if(Request::is('Orders')) active @endif" href="{{route('userorders')}}">Orders</a></li>
                 @auth
                 @if (Auth::user()->role=="SuberAdmin")
                 <li><a href="{{route('AdminDashboard')}}">DASHBOARD</a></li>

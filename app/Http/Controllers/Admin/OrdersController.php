@@ -17,7 +17,7 @@ class OrdersController extends Controller
         $validatedData = $request->validate([
             'status'=>'required',
         ]);
-        $order = Order::find($id);
+        $order = order::find($id);
         $order->status = $validatedData['status'];
         $order->save();
         return redirect()->route('orders')->with('success', 'Data Updated successfully');

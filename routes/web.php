@@ -19,6 +19,7 @@ use App\Http\Controllers\PaypalController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\dietTrains;
 use App\Http\Controllers\Main\cartController;
+use App\Http\Controllers\Main\OrdersController as MainOrdersController;
 use App\Http\Controllers\Main\packages as MainPackages;
 use Illuminate\Support\Facades\Route;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
@@ -52,13 +53,14 @@ Route::middleware(['auth'])->group(function () {
     //cart
     Route::get('/Cart', [cartController::class, 'index'])->name('cart');
     Route::get('/Cart/remove/{id}', [cartController::class, 'remove'])->name('cartRemove');
+    //order
+    Route::get('/Orders', [MainOrdersController::class, 'index'])->name('userorders');
+    Route::get('/Orders/details/{id}', [MainOrdersController::class, 'details'])->name('orderdetails');
 });
 
     //perfect weight
     Route::get('/perfectweight', [perfectweight::class, 'index'])->name('perfectweight');
     Route::post('/perfectweight/result', [perfectweight::class, 'result'])->name('weightresult');
-
-
     Route::middleware(['auth','CodeVerify','SuberAdmin'])->group(function () {
         //Dite
     Route::get('/dashboard/dite/read/{id}', [dietTrains::class, 'read'])->name('read');

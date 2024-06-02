@@ -15,7 +15,7 @@
     <hr id="hr_side">
     <a class=" @if(Request::is('favorite')) active @endif"  href="{{route('Favorites')}}">FAVORITES</a>
     <hr id="hr_side">
-    <a href="#start">Orders</a>
+    <a class=" @if(Request::is('Orders')) active @endif"  href="{{route('userorders')}}">Orders</a>
     <hr id="hr_side">
    </div>
     @if(Request::is('/'))
@@ -26,7 +26,7 @@
         @if (isset($coach->image->path))
             <a href="#coach">Coaches</a>
             <hr id="hr_side">
-            @break 
+            @break
         @endif
     @endforeach
 @endif

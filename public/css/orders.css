@@ -1,0 +1,111 @@
+.order_page{
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px ;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.order{
+    color: rgba(0, 0, 0, 0.348);
+    padding-top: 0;
+    margin-top: 0;
+}
+.order_1 {
+    height: 165px;
+    border: 1px solid rgb(0 255 24 / 13%);
+    border-radius: 20px;
+    margin-top: 50px;
+    color: white;
+    background-color: #0000003b;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 50px;
+}
+.order_1 .first{
+     margin-top: 15px ;
+     margin-left: 20px;
+     float: left;
+}
+.order_1 .secound{
+    float: left;
+    text-align: center;
+    /* margin-left: 80px;
+    padding: 50px; */
+    color: rgba(0, 0, 0, 0.477);
+}
+.order_1 .imge{
+    display: inline-block;
+    float: right;
+}
+
+
+.order_2{
+    height: 165px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    /* padding: 20px; */
+    margin-top: 20px;
+}
+.order_2 .first{
+     /* display: inline; */
+     margin-top: 15px ;
+     margin-left: 20px;
+     float: left;
+}
+.order_2 .secound{
+    /* display: inline; */
+    float: left;
+    text-align: center;
+    margin-left: 80px;
+    padding: 50px;
+    color: rgba(0, 0, 0, 0.477);
+}
+.order_2 .imge{
+    display: inline-block;
+    float: right;
+
+}
+
+
+.order_3{
+    height: 165px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    /* padding: 20px; */
+    margin-top: 20px;
+}
+.order_3 .first3{
+    /* display: inline; */
+    margin-top: 15px ;
+    margin-left: 20px;
+    float: left;
+}
+#span{
+    margin-bottom: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 15px;
+    color: green;
+}
+.order_3 .secound3{
+    /* display: inline; */
+    float: left;
+    text-align: center;
+    margin-left: 80px;
+    padding: 50px;
+    color: rgba(0, 0, 0, 0.477);
+}
+.order_3 .imge3{
+    /* display: inline-block; */
+    float: right;
+}
+
+#p a
+{
+    color: rgb(7, 172, 7);
+    text-decoration: none;
+}
+
+p
+{
+    color: #ffffff;
+}
