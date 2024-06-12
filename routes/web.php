@@ -116,8 +116,8 @@ Route::middleware(['auth'])->group(function () {
 Route::middleware(['auth','CodeVerify'])->group(function () {
     //paypal
     Route::post('paypal/{id}', [PaypalController::class, 'paypal'])->name('paypal');
-    Route::get('success', [PaypalController::class, 'success'])->name('success');
-    Route::get('cancel', [PaypalController::class, 'cancel'])->name('cancel');
+    Route::get('success/paypal', [PaypalController::class, 'success'])->name('success');
+    Route::get('cancel/paypal', [PaypalController::class, 'cancel'])->name('cancel');
     //order
     Route::post('paypal', [PaypalController::class, 'order'])->name('orderpaypal');
     Route::get('success', [PaypalController::class, 'ordersuccess'])->name('ordersuccess');

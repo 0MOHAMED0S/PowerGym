@@ -99,7 +99,7 @@
                     <div class="card">
                         <div class="card-body6">
                             <a class="card-icon" href="{{route('DiteTrainAdmin')}}"><i class="fas fa-shopping-bag"></i></a>
-                            <pre class="card-text1 text-light">{{$productscount}}</pre>
+                            <pre class="card-text1 text-light">{{$train}}</pre>
                             <p class="card-text text-light"> Dite Train </p>
                             <a href="{{route('DiteTrainAdmin')}}" class="btn btn-light"> SEE ALL</a>
                         </div>
@@ -107,7 +107,7 @@
                     <div class="card">
                         <div class="card-body6">
                             <a class="card-icon" href="{{route('orders')}}"><i class="fas fa-shopping-bag"></i></a>
-                            <pre class="card-text1 text-light">{{$productscount}}</pre>
+                            <pre class="card-text1 text-light">{{$orders}}</pre>
                             <p class="card-text text-light"> Orders </p>
                             <a href="{{route('orders')}}" class="btn btn-light"> SEE ALL</a>
                         </div>
