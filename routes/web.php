@@ -21,6 +21,7 @@ use App\Http\Controllers\dietTrains;
 use App\Http\Controllers\Main\cartController;
 use App\Http\Controllers\Main\OrdersController as MainOrdersController;
 use App\Http\Controllers\Main\packages as MainPackages;
+use App\Http\Controllers\Task\TaskController;
 use Illuminate\Support\Facades\Route;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
@@ -28,6 +29,9 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('articles',TaskController::class);
+
 
 Route::get('/', [home::class, 'index'])->name('home');
 

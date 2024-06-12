@@ -26,12 +26,10 @@
                 @else
                 <li><a href="{{route('login')}}">Login</a></li>
                 @endauth
-
                 {{-- <li><a href="{{ route('dashboard') }}">Dash</a></li> --}}
                 <!-- <li><a href="#">About Us</a></li>
                 <li><a href="#">Coaches</a></li>
                 <li><a href="#">Contact us</a></li> -->
-
             </ul>
             <hr id="hr_home">
         </div>
@@ -45,7 +43,6 @@
             <div class="fill">
                 <i id="i" class="bi bi-list open-btn" onclick="toggleSidebar()"></i>
             </div>
-
             {{-- @include('layouts.sidebar.sidebar') --}}
         </div>
     </nav>

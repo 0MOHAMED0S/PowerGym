@@ -18,11 +18,7 @@
                 {{-- Fonts --}}
         <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     @endsection
-
-
     @include('MainPages.home')
-
-
     @section('script')
         {{-- Coaches --}}
         <script src="{{ asset('js/coaches.js') }}"></script>
